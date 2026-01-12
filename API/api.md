@@ -11,7 +11,7 @@ Uri: /scan/queryDataBase
 
 Request method: GET
 
-Returns the ABEY Chain real time data, include Lightning Block、Block Time、Snail Block、Transaction Count、Address Count、Committee.
+Returns Abey's real-time data, including lightning blocks, block times, transaction Counts, address counts, and committee.
 
 ##### Parameters
 
