@@ -58,8 +58,8 @@ Uri: /scan/querySupplyData
 
 Request method: GET
 
-Returns ABEY supply information, including Market Cap, Price, Max Supply, Total Supply
-, Remaining Supply
+Returns Abey's supply information, including market cap, price, max supply, total supply, and remaining supply. 
+
 ##### Parameters
 
 Parameter：
