@@ -2,7 +2,7 @@
 
 ## Overview
 
-The objective of this document is to provide a brief overview of integrating with the EVM-compatible Abey blockchain. For teams that already support ETH, supporting Abey is as straightforward as spinning up an Abey node (which has the same API as go-ethereum) and populating Abey's ChainID (179) when constructing transactions.
+The objective of this document is to provide a brief overview of integrating with the EVM-compatible Abey blockchain. For teams that already support ETH, supporting Abey is as straightforward as spinning up an Abey node (which has the same API as go-ethereum) and populating Abey's chain ID (179) when constructing transactions.
 
 ## Integration using EVM Endpoints
 
@@ -44,7 +44,7 @@ If you plan on extracting data from Abey into your own systems using golang, we 
 
 Abey transactions are identical to standard EVM transactions with one exceptions:
 
-    They must be signed with Abey’s ChainID (179).
+    They must be signed with Abey’s chain ID (179).
 
 
 For development purposes, Abey supports all the popular tooling for Ethereum, such as `MetaMask and Remix`, `Truffle`, and `Hardhat`, so developers familiar with Ethereum and Solidity can feel right at home.
