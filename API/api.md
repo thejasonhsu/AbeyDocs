@@ -2,10 +2,10 @@
 
 List of APIs:
 
-- [statusDataBase](#statusDataBase)
-- [statusSupplyData](#statusSupplyData)
+- [statusDatabase](#statusDatabase)
+- [statusSupply](#statusSupply)
 
-#### statusDataBase
+#### statusDatabase
 
 Uri: /status/database
 
@@ -50,7 +50,7 @@ curl --location --request GET 'https://api.abeyscan.com/api/status/database'
     }
 }
 ```
-#### statusSupplyData
+#### statusSupply
 
 Uri: /status/supply
 
