@@ -5,7 +5,7 @@
 Clone the repository to a directory of your choosing:
 
 ```shell
-git clone https://github.com/abeychain/go-abey/
+git clone https://github.com/abeyfoundation/go-abey/
 ```
 Install latest distribution of [Go](https://golang.org/) if you don't have it already.
 
