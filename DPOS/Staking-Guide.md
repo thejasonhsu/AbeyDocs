@@ -1,9 +1,5 @@
 Abey adopts DPoS. The DPoS committee members use pbft protocol to produce fast blocks which include transactions and to confirm the previous snail blocks. The fPoW miners mine fruits (point to fast blocks) and snail blocks (include fruits) to resit the long range attack and to prevent tampering.
 
-## Reward
-The business module of Abey is deflation. The staking reward wil deflate 20% every year.
-From March 30th 2020, the annumal reward will be 3,000,000, 2,400,000, 1,920,000, ...
-
 ## Validator
 Validators are the DPoS committee members to process transactions. The minimum amount to be validator is 20,000 abey.
 
