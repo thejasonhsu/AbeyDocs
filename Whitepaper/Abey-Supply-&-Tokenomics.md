@@ -58,7 +58,7 @@ Documentation: https://docs.abey.com/scan-api/api
 --  Burn address: 0x000000000000000000000000000000000000dEaD
 - Circulating supply: 1,137,220,320.41
 - Max supply (soft cap): 1,426,787,200  
-  (defined as less than 1 ABEY annual emissions)
+--  Less than 1 ABEY annual emissions
 
 ## $ABEY Tokenomics
 
