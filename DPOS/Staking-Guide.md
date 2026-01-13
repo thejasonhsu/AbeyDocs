@@ -32,7 +32,7 @@ The RPC APIs definitions are [here](https://github.com/abeyfoundation/go-abey/wi
 
 `Abey Staking CLI` is a tool, which can call deposit contract participate in POS. See [this](https://github.com/abeyfoundation/go-abey/wiki/Impawn-CLI) page for more information.
 
-### Building-abey
+### Building-Abey
 
 Follow the appropriate link below to find installation instructions for your platform.
 * [Installation Instructions for Mac OS X](https://github.com/abeyfoundation/go-abey/wiki/Installation-Instructions-for-Mac-OS-X)
