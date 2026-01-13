@@ -2,12 +2,12 @@
 
 List of APIs:
 
-- [queryDataBase](#queryDataBase)
-- [querySupplyData](#querySupplyData)
+- [statusDataBase](#statusDataBase)
+- [statusSupplyData](#statusSupplyData)
 
-#### queryDataBase
+#### statusDataBase
 
-Uri: /scan/queryDataBase
+Uri: /status/database
 
 Request method: GET
 
@@ -15,9 +15,7 @@ Returns Abey's real-time data, including lightning blocks, block times, transact
 
 ##### Parameters
 
-Parameter：
-
-none
+Parameters: None
 
 ##### Returns
 
@@ -36,7 +34,7 @@ none
 ##### Example
 ```js
 // Request
-curl --location --request GET 'https://scanapi.abeychain.com/scan/queryDataBase'
+curl --location --request GET 'https://api.abeyscan.com/api/status/database'
 
 // Result
 {
@@ -52,9 +50,9 @@ curl --location --request GET 'https://scanapi.abeychain.com/scan/queryDataBase'
     }
 }
 ```
-#### querySupplyData
+#### statusSupplyData
 
-Uri: /scan/querySupplyData
+Uri: /status/supply
 
 Request method: GET
 
@@ -62,9 +60,7 @@ Returns Abey's supply information, including market cap, price, max supply, tota
 
 ##### Parameters
 
-Parameter：
-
-none
+Parameters: None
 
 ##### Returns
 
@@ -81,7 +77,7 @@ none
 ##### Example
 ```js
 // Request
-curl --location --request GET 'https://scanapi.abeychain.com/scan/querySupplyData'
+curl --location --request GET 'https://api.abeyscan.com/api/status/supply'
 
 // Result
 {
