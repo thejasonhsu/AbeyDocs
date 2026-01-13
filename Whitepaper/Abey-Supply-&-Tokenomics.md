@@ -51,12 +51,12 @@ Documentation: https://docs.abey.com/scan-api/api
 
 #### Current Supply Metrics
 
-- Existing supply: 1,391,411,979.06
-- Frozen supply (legacy PoW): 192,301,678.65  
+- Existing supply: 1,391,411,979
+- Frozen supply (legacy PoW): 192,301,679
 --  Address: 0xD9DeC020337DAeB794936Bc0A6Ead8E343cb9B6c
 - Burned supply: 61,889,980  
 --  Burn address: 0x000000000000000000000000000000000000dEaD
-- Total supply: 1,137,220,320.41
+- Total supply: 1,137,220,320
 - Max supply (soft cap): 1,426,787,200  
 --  Less than 1 ABEY annual emissions
 
