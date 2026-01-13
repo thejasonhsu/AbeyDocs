@@ -1,9 +1,9 @@
 ```
 $ gabey help
 NAME:
-   gabey - the abeychain command line interface
+   gabey - Abey command line interface
 
-   Copyright 2018-2019 The abeychain Authors
+   Copyright 2018-2026 Abey Foundation
 
 USAGE:
    gabey [options] command [command options] [arguments...]
@@ -29,25 +29,25 @@ COMMANDS:
    monitor           Monitor and visualize node metrics
    removedb          Remove blockchain and state databases
    version           Print version numbers
-   wallet            Manage abeychain presale wallets
+   wallet            Manage Abey presale wallets
    help, h           Shows a list of commands or help for one command
    
 TRUCHAIN OPTIONS:
-  --config value                    TOML configuration file
-  --datadir "/home/ligi/.abeychain" Data directory for the databases and keystore
-  --keystore                        Directory for the keystore (default = inside the datadir)
-  --nousb                           Disables monitoring for and managing USB hardware wallets
-  --networkid value                 Network identifier (default: 1)
-  --testnet                         Ropsten network: pre-configured proof-of-work test network
-  --devnet                          dev network: pre-configured proof-of-work develop network
-  --syncmode "fast"                 Blockchain sync mode ("fast", "full", "light",or "snapshot")
-  --gcmode value                    Blockchain garbage collection mode ("full", "archive") (default: "full")
-  --stategc			    Delete block body and receipt
-  --abeystats value                 Reporting URL of a abeystats service (nodename:secret@host:port)
-  --identity value                  Custom node name
-  --lightserv value                 Maximum percentage of time allowed for serving LES requests (0-90) (default: 0)
-  --lightpeers value                Maximum number of LES client peers (default: 100)
-  --lightkdf                        Reduce key-derivation RAM & CPU usage at some expense of KDF strength
+  --config value                              TOML configuration file
+  --datadir "/home/ligi/.abeyfoundation"      Data directory for the databases and keystore
+  --keystore                                  Directory for the keystore (default = inside the datadir)
+  --nousb                                     Disables monitoring for and managing USB hardware wallets
+  --networkid value                           Network identifier (default: 1)
+  --testnet                                   Ropsten network: pre-configured proof-of-work test network
+  --devnet                                    dev network: pre-configured proof-of-work develop network
+  --syncmode "fast"                           Blockchain sync mode ("fast", "full", "light",or "snapshot")
+  --gcmode value                              Blockchain garbage collection mode ("full", "archive") (default: "full")
+  --stategc			                            Delete block body and receipt
+  --abeystats value                           Reporting URL of a abeystats service (nodename:secret@host:port)
+  --identity value                            Custom node name
+  --lightserv value                           Maximum percentage of time allowed for serving LES requests (0-90) (default: 0)
+  --lightpeers value                          Maximum number of LES client peers (default: 100)
+  --lightkdf                                  Reduce key-derivation RAM & CPU usage at some expense of KDF strength
   
 SINGLENODE OPTIONS:
   --singlenode           single node model start
@@ -87,7 +87,7 @@ PERFORMANCE TUNING OPTIONS:
   --trie-cache-gens value  Number of trie node generations to keep in memory (default: 120)
   
 ACCOUNT OPTIONS:
-  --unlock value    Comma separated list of accounts to unlock
+  --unlock value    Comma-separated list of accounts to unlock
   --password value  Password file to use for non-interactive password input
   
 API AND CONSOLE OPTIONS:
@@ -102,11 +102,11 @@ API AND CONSOLE OPTIONS:
   --wsorigins value      Origins from which to accept websockets requests
   --ipcdisable           Disable the IPC-RPC server
   --ipcpath              Filename for IPC socket/pipe within the datadir (explicit paths escape it)
-  --rpccorsdomain value  Comma separated list of domains from which to accept cross origin requests (browser enforced)
-  --rpcvhosts value      Comma separated list of virtual hostnames from which to accept requests (server enforced). Accepts '*' wildcard. (default: "localhost")
+  --rpccorsdomain value  Comma-separated list of domains from which to accept cross-origin requests (browser-enforced)
+  --rpcvhosts value      Comma-separated list of virtual hostnames from which to accept requests (server enforced). Accepts '*' wildcard. (default: "localhost")
   --jspath loadScript    JavaScript root path for loadScript (default: ".")
   --exec value           Execute JavaScript statement
-  --preload value        Comma separated list of JavaScript files to preload into the console
+  --preload value        Comma-separated list of JavaScript files to preload into the console
   
 NETWORKING OPTIONS:
   --bootnodes value     Comma separated enode URLs for P2P discovery bootstrap (set v4+v5 instead for light servers)
@@ -160,5 +160,5 @@ MISC OPTIONS:
   --help, -h  show help
 
 COPYRIGHT:
-   Copyright 2018-2019 The abeychain Authors
+   Copyright 2018-2026 Abey Foundation
 ```
