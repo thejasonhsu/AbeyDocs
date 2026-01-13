@@ -38,13 +38,20 @@ Abey's emissions follow a declining inflation model with a soft cap. Mining rewa
 
 ### Supply Data
 Real-time data from the explorer can be accessed via API (https://api.abeyscan.com/api/status/supply). Instructions are [here](https://docs.abey.com/scan-api/api). 
+
 Existing supply - 1,391,411,979.06
+
 Frozen supply (PoW) - 192,301,678.65 at 0xD9DeC020337DAeB794936Bc0A6Ead8E343cb9B6c
+
 Burned supply - 61,889,980 at 0x000000000000000000000000000000000000dEaD
+
 Total supply - 1,137,220,320.41
+
 Max supply (soft cap with < 1 ABEY/year emissions) - 1,426,787,200
 
+
 ### Tokenomics
+
 | Presale, Community, Ecosystem     | 50%                      |
 | Staking, Validator Rewards        | 20%                      |
 | Foundation, Treasury              | 12.5%                    |
