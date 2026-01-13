@@ -1,4 +1,4 @@
-The APIs supported by abeychain are mainly based on function modules: admin, miner, personal, etc. These APIs are provided using JSON-RPC.
+The APIs supported by Abey are mainly based on function modules: admin, miner, personal, etc. These APIs are provided using JSON-RPC.
 
 ## Enabling the management APIs
 
