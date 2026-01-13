@@ -35,9 +35,9 @@ Then that means that the `setx` command will fail, and proceeding will truncate 
 2 C:\Users\xxx> set "Path=%USERPROFILE%\bin;%Path%"
 3 C:\Users\xxx> setx GOPATH "%GOPATH%"
 4 C:\Users\xxx> setx Path "%Path%"
-5 C:\Users\xxx> mkdir src\github.com\abeychain
-6 C:\Users\xxx> git clone https://github.com/abeychain/go-abey src\github.com\abeychain\go-abey
-7 C:\Users\xxx> cd src\github.com\abeychain\go-abey
+5 C:\Users\xxx> mkdir src\github.com\abeyfoundation
+6 C:\Users\xxx> git clone https://github.com/abeyfoundation/go-abey src\github.com\abeyfoundation\go-abey
+7 C:\Users\xxx> cd src\github.com\abeyfoundation\go-abey
 8 C:\Users\xxx> go get -u -v golang.org/x/net/context
 ```
 if the step 8 ran error, can execute the next commands:
@@ -51,5 +51,5 @@ C:\Users\xxx> go install net
 Finally, the command to compile gabey is:
 
 ```text
-C:\Users\xxx\src\github.com\abeychain\go-abey> go install -v ./cmd/...
+C:\Users\xxx\src\github.com\abeyfoundation\go-abey> go install -v ./cmd/...
 ```
