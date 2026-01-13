@@ -1,6 +1,6 @@
 Updated as of January 2026
 
-## Supply
+## $ABEY Supply
 
 ### History
 
@@ -60,7 +60,7 @@ Documentation: https://docs.abey.com/scan-api/api
 - Max supply (soft cap): 1,426,787,200  
   (defined as less than 1 ABEY annual emissions)
 
-### Tokenomics
+## $ABEY Tokenomics
 
 | Allocation Category                  | Percentage |
 |-------------------------------------|------------|
