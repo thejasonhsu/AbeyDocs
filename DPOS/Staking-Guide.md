@@ -1,8 +1,4 @@
-abeychain adopts hybrid consensus, fPow + DPoS. The DPoS committee members use pbft protocol to produce fast blocks which include transactions and to confirm the previous snail blocks. The fPoW miners mine fruits (point to fast blocks) and snail blocks (include fruits) to resit the long range attack and to prevent tampering.
-
-## Reward
-The business module of abeychain is deflation. The staking reward wil deflate 20% every year.
-From March 30th 2020, the annumal reward will be 3,000,000, 2,400,000, 1,920,000, ...
+Abey adopts DPoS. The DPoS committee members use pbft protocol to produce fast blocks which include transactions and to confirm the previous snail blocks. The fPoW miners mine fruits (point to fast blocks) and snail blocks (include fruits) to resit the long range attack and to prevent tampering.
 
 ## Validator
 Validators are the DPoS committee members to process transactions. The minimum amount to be validator is 20,000 abey.
@@ -22,30 +18,30 @@ Stake/withdraw option is based a system contract, everyone can call the contract
 We also provide a [staking CLI](#Staking-CLI) to stake easily.
 
 ### Staking Contract
-abeychain staking contract is deployed at address:
+Abey staking contract is deployed at address:
 ```
 0x000000000000000000747275657374616b696E67
 ```
-[Definitions of all contract functions here](https://github.com/abeychain/go-abey/wiki/Staking-Contract)
+[Definitions of all contract functions here](https://github.com/abeyfoundation/go-abey/wiki/Staking-Contract)
 
 ### RPC and SDK
-The RPC APIs definitions are [here](https://github.com/abeychain/go-abey/wiki/RPC-API)
+The RPC APIs definitions are [here](https://github.com/abeyfoundation/go-abey/wiki/RPC-API)
 
 
 ## Building CLI
 
-`abeychain Staking CLI` is a tool, which can call deposit contract participate in POS. See [this](https://github.com/abeychain/go-abey/wiki/Impawn-CLI) page for more information.
+`Abey Staking CLI` is a tool, which can call deposit contract participate in POS. See [this](https://github.com/abeyfoundation/go-abey/wiki/Impawn-CLI) page for more information.
 
-### Building-abeychain
+### Building-Abey
 
 Follow the appropriate link below to find installation instructions for your platform.
-* [Installation Instructions for Mac OS X](https://github.com/abeychain/go-abey/wiki/Installation-Instructions-for-Mac-OS-X)
-* [Installation Instructions for Windows](https://github.com/abeychain/go-abey/wiki/Installation-Instructions-for-Windows)
+* [Installation Instructions for Mac OS X](https://github.com/abeyfoundation/go-abey/wiki/Installation-Instructions-for-Mac-OS-X)
+* [Installation Instructions for Windows](https://github.com/abeyfoundation/go-abey/wiki/Installation-Instructions-for-Windows)
 * Installation Instructions for Linux/Unix
-  * [Ubuntu](https://github.com/abeychain/go-abey/wiki/Installation-Instructions-for-Ubuntu)
-  * [Centos](https://github.com/abeychain/go-abey/wiki/Installation-Instructions-for-Centos)
+  * [Ubuntu](https://github.com/abeyfoundation/go-abey/wiki/Installation-Instructions-for-Ubuntu)
+  * [Centos](https://github.com/abeyfoundation/go-abey/wiki/Installation-Instructions-for-Centos)
 * Usage instructions for Docker
-  * [Docker](https://github.com/abeychain/go-abey/wiki/Running-in-Docker)
+  * [Docker](https://github.com/abeyfoundation/go-abey/wiki/Running-in-Docker)
 
 
 ### PrePare
@@ -78,9 +74,9 @@ Building `impawn` requires both a Go and a C compiler. Once the dependencies are
 ```
 
 ## Staking-CLI
-  The process of abeychain Staking-ClI is divided into three parts. First, on the premise of ensuring the balance of the account, Launch a [Impawn](#Impawn) transaction, 
-only if the amount of deposit(`value`) is greater than 2W `abey` can participate in the election of the committee. If you ready to withdraw from the committee's POS consensus next epoch,
-Launch a [Cancel](#cancel) transaction in the current epoch. After waiting for 15 days, we need to `actively` launch [Withdraw](#Withdraw) transaction. The extracted abey will be immediately transferred to the specified account.
+The Abey Staking-CLI process is divided into three parts. First, on the premise of ensuring the balance of the account, launch a [Impawn](#Impawn) transaction, 
+only if the amount of deposit(`value`) is greater than 2W `abey` can participate in the election of the committee. If you are ready to withdraw from the committee's POS consensus next epoch,
+Launch a [Cancel](#cancel) transaction in the current epoch. After waiting for 15 days, we need to `actively` launch [Withdraw](#Withdraw) transaction. The extracted ABEY will be immediately transferred to the specified account.
 
 * Since [Impawn](#Impawn) needs to be greater than 2W which can invoked successfully, [Append](#Append) can be used if the impawn amount is less than 2W.
 * Update fee can invoke [UpdateFee](#UpdateFee)

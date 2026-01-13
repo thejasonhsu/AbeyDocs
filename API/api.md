@@ -2,22 +2,20 @@
 
 List of APIs:
 
-- [queryDataBase](#queryDataBase)
-- [querySupplyData](#querySupplyData)
+- [statusDataBase](#statusDataBase)
+- [statusSupplyData](#statusSupplyData)
 
-#### queryDataBase
+#### statusDataBase
 
-Uri: /scan/queryDataBase
+Uri: /status/database
 
 Request method: GET
 
-Returns the ABEY Chain real time data, include Lightning Block、Block Time、Snail Block、Transaction Count、Address Count、Committee.
+Returns Abey's real-time data, including lightning blocks, block times, transaction Counts, address counts, and committee.
 
 ##### Parameters
 
-Parameter：
-
-none
+Parameters: None
 
 ##### Returns
 
@@ -36,7 +34,7 @@ none
 ##### Example
 ```js
 // Request
-curl --location --request GET 'https://scanapi.abeychain.com/scan/queryDataBase'
+curl --location --request GET 'https://api.abeyscan.com/api/status/database'
 
 // Result
 {
@@ -52,19 +50,17 @@ curl --location --request GET 'https://scanapi.abeychain.com/scan/queryDataBase'
     }
 }
 ```
-#### querySupplyData
+#### statusSupplyData
 
-Uri: /scan/querySupplyData
+Uri: /status/supply
 
 Request method: GET
 
-Returns ABEY supply information, including Market Cap, Price, Max Supply, Total Supply
-, Remaining Supply
+Returns Abey's supply information, including market cap, price, max supply, total supply, and remaining supply. 
+
 ##### Parameters
 
-Parameter：
-
-none
+Parameters: None
 
 ##### Returns
 
@@ -81,7 +77,7 @@ none
 ##### Example
 ```js
 // Request
-curl --location --request GET 'https://scanapi.abeychain.com/scan/querySupplyData'
+curl --location --request GET 'https://api.abeyscan.com/api/status/supply'
 
 // Result
 {

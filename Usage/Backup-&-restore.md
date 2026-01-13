@@ -7,13 +7,13 @@
 Everything `gabey` persists gets written inside its data directory (except for the PoW Ethash DAG, see note below).
 The default data directory locations are platform specific:
 
-* Mac: `~/Library/abeychain`
-* Linux: `~/.abeychain`
-* Windows: `%APPDATA%\abeychain`
+* Mac: `~/Library/abeyfoundation`
+* Linux: `~/.abeyfoundation`
+* Windows: `%APPDATA%\abeyfoundation`
 
 Accounts are stored in the `keystore` subdirectory. The contents of this directories should be transportable between nodes, platforms, implementations (C++, Go, Python).
 
-To configure the location of the data directory, the `--datadir` parameter can be specified. See [CLI Options](https://github.com/abeychain/go-abey/wiki/Command-Line-Options) for more details.
+To configure the location of the data directory, the `--datadir` parameter can be specified. See [CLI Options](https://github.com/abeyfoundation/go-abey/wiki/Command-Line-Options) for more details.
 
 ## Upgrades
 

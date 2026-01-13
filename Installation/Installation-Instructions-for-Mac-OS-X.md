@@ -5,7 +5,7 @@
 Clone the repository to a directory of your choosing:
 
 ```shell
-git clone https://github.com/abeychain/go-abey/
+git clone https://github.com/abeyfoundation/go-abey/
 ```
 
 Building `gabey` requires the Go compiler:
