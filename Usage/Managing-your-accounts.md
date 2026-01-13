@@ -4,7 +4,7 @@ Remember your password.
 If you lose the password you use to encrypt your account, you will not be able to access that account.
 Repeat: It is NOT possible to access your account without a password and there is no _forgot my password_ option here. Do not forget it.
 
-The abeychain CLI `gabey` provides account management via the `account` command:
+The Abey CLI `gabey` provides account management via the `account` command:
 
 ```
 $ gabey account <command> [options...] [arguments...]
@@ -24,7 +24,7 @@ or import). Without it you are not able to unlock your account.
 Note that exporting your key in unencrypted format is NOT supported.
 
 Keys are stored under `<DATADIR>/keystore`. Make sure you backup your keys regularly! See
-[DATADIR backup & restore](https://github.com/abeychain/go-abey/wiki/Backup-&-restore)
+[DATADIR backup & restore](https://github.com/abeyfoundation/go-abey/wiki/Backup-&-restore)
 for more information.
 If a custom datadir and keystore option are given the keystore
 option takes preference over the datadir option.
@@ -34,7 +34,7 @@ order of accounts when listing, is lexicographic, but as a consequence of the ti
 format, it is actually order of creation
 
 It is safe to transfer the entire directory or the individual keys therein between
-abeychain nodes. Note that in case you are adding keys to your node from a different node,
+Abey nodes. Note that in case you are adding keys to your node from a different node,
 the order of accounts may change. So make sure you do not rely or change the index in your
 scripts or code snippets.
 
@@ -56,8 +56,8 @@ list [command options] [arguments...]
 Print a short summary of all accounts
 
 OPTIONS:
-  --datadir "/home/bas/.abeychain"  Data directory for the databases and keystore
-  --keystore                       Directory for the keystore (default = inside the datadir)
+  --datadir "/home/bas/.abeyfoundation"  Data directory for the databases and keystore
+  --keystore                             Directory for the keystore (default = inside the datadir)
 ```
 
 
@@ -110,11 +110,9 @@ Repeat Passphrase:
 
 ### Non-interactive use 
 
-You supply a plaintext password file as argument to the `--password` flag. The data in the
-file consists of the raw characters of the password, followed by a single newline.
+You supply a plaintext password file as an argument to the `--password` flag. The data in the file consists of the password's raw characters, followed by a single newline.
 
-**Note**: Supplying the password directly as part of the command line is not recommended,
-but you can always use shell trickery to get round this restriction.
+**Note**: Supplying the password directly as part of the command line is not recommended, but you can always use shell trickery to get around this restriction.
 
 ```
 $ gabey account new --password /path/to/password 
@@ -181,9 +179,7 @@ For non-interactive use the passphrase can be specified with the `--password` fl
 gabey account import --password <passwordfile> <keyfile>
 ```
 
-**Note**: Since you can directly copy your encrypted accounts to another abeychain
-instance, this import/export mechanism is not needed when you transfer an account between
-nodes.
+**Note**: Since you can directly copy your encrypted accounts to another Abey instance, this import/export mechanism is not needed when you transfer an account between nodes.
 
 **Warning:** when you copy keys into an existing node's keystore, the order of accounts
 you are used to may change. Therefore you make sure you either do not rely on the account
@@ -225,7 +221,7 @@ Importing your presale wallet is very easy. If you remember your password that i
 gabey wallet import /path/to/my/presale.wallet
 ```
 
-will prompt for your password and imports your abey presale account. It can be used
+will prompt for your password and imports your Abey presale account. It can be used
 non-interactively with the --password option taking a passwordfile as argument containing
 the wallet password in cleartext.
 
@@ -244,7 +240,7 @@ Account #1: {9acb9ff906641a434803efb474c96a837756287f} keystore:///tmp/mykeystor
 to list your accounts in order of creation. 
 
 **Note**:
-This order can change if you copy keyfiles from other nodes, so make sure you either do not rely on indexes or make sure if you copy keys you check and update your account indexes in your scripts. 
+This order can change if you copy keyfiles from other nodes, so make sure you either do not rely on indexes or, if you copy keys, check and update your account indexes in your scripts. 
 
 When using the console:
 ```
