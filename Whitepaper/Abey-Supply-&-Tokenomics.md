@@ -52,7 +52,7 @@ Documentation: https://docs.abey.com/scan-api/api
 #### Current Supply Metrics
 
 - Existing supply: 1,391,411,979
-- Frozen supply (legacy PoW): 192,301,679
+- Frozen supply (legacy PoW): 192,301,679  
 --  Address: 0xD9DeC020337DAeB794936Bc0A6Ead8E343cb9B6c
 - Burned supply: 61,889,980  
 --  Burn address: 0x000000000000000000000000000000000000dEaD
