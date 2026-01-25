@@ -46,7 +46,7 @@ setx GOPATH "%GOPATH%"
 setx Path "%Path%"
 ```
 
-⚠️ **Important Note**
+**Important Note**
 
 If you see the warning below, the `setx` command may truncate your `PATH` variable:
 
