@@ -1,6 +1,6 @@
 _Last updated: January 2026_
 
-# Staking Contract Reference
+# Staking Contract
 
 ## Contract Address
 
