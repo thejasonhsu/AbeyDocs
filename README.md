@@ -1,8 +1,6 @@
 _Last updated: January 2026_
 
-# Abey Documentation
-
-This repository contains official documentation and network endpoints for **Abey**.
+Official Abey documentation and network endpoints are maintained in this repository.
 
 ---
 
