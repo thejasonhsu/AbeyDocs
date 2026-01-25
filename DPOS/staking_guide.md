@@ -1,7 +1,5 @@
 _Last updated: January 2026_
 
-# Abey Staking Guide
-
 This guide explains how staking works on Abey and provides step-by-step instructions for running a validator and using the staking CLI.
 
 ---
