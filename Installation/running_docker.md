@@ -50,7 +50,7 @@ docker run -it \
   abeyfoundation/gabey --rpc --rpcaddr "0.0.0.0"
 ```
 
-⚠️ **Security Warning**
+**Security Warning**
 
 Binding RPC to `0.0.0.0` exposes the JSON-RPC interface to external connections.  
 **Do not use this setting on public or untrusted networks.**
