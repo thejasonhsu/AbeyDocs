@@ -16,7 +16,7 @@ The Abey staking contract is deployed at the following address:
 
 Refer to the official documentation for the full ABI definition:
 
-- [Staking ABI](/staking_abi.md)
+- [Staking ABI](DPOS/staking_abi.md)
 
 ---
 
