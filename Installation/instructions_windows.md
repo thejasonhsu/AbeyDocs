@@ -1,7 +1,5 @@
 _Last updated: January 2026_
 
-# Installation Instructions for Windows
-
 This guide explains how to build **Abey (`gabey`)** from source on Windows using Chocolatey and Go.
 
 ---
