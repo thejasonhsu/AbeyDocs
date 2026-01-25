@@ -1,7 +1,5 @@
 _Last updated: January 2026_
 
-# Building Abey
-
 This document provides installation instructions for building and running Abey on different platforms.
 
 ---
