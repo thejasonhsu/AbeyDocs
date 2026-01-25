@@ -13,7 +13,7 @@ Before building Abey, ensure the following dependencies are installed:
 - **C compiler and build tools**
 
 If Go is not installed, download and install it from:
-- https://golang.org/
+- https://golang.org
 
 ---
 
