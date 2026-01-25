@@ -10,20 +10,20 @@ Follow the appropriate link below based on your operating system or environment.
 
 ### macOS
 
-- [Installation Instructions for macOS](Installation-Instructions-for-Mac-OS-X.md)
+- [Installation instructions for macOS](instructions_macos.md)
 
 ### Windows
 
-- [Installation Instructions for Windows](Installation-Instructions-for-Windows.md)
+- [Installation instructions for Windows](instructions_windows.md)
 
 ### Linux / Unix
 
-- [Installation Instructions for Ubuntu](Installation-Instructions-for-Ubuntu.md)
-- [Installation Instructions for CentOS](Installation-Instructions-for-Centos.md)
+- [Installation instructions for Ubuntu](instructions_ubuntu.md)
+- [Installation instructions for CentOS](instructions_centos.md)
 
 ### Docker
 
-- [Running Abey in Docker](Running-in-Docker.md)
+- [Running Abey in Docker](running_docker.md)
 
 ---
 
