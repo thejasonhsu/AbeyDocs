@@ -1,7 +1,5 @@
 _Last updated: January 2026_
 
-# Command-Line Options Reference
-
 This document provides a **complete reference** for all command-line options supported by the **Abey (`gabey`)** client.
 Options are grouped by functionality for easier navigation and operational clarity.
 
