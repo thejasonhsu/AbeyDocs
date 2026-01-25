@@ -1,7 +1,5 @@
 _Last updated: January 2026_
 
-# Scan API Reference
-
 ## Available Endpoints
 
 - [`GET /v2/stats`](#get-v2stats)
