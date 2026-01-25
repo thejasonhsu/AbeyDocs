@@ -25,8 +25,8 @@ No protocol-level changes are required beyond chain-specific configuration.
 
 You can build Abey from source or download a prebuilt release:
 
-- Source code: https://github.com/AbeyFoundation/go-abey
-- Releases: https://github.com/AbeyFoundation/go-abey/releases
+- Source code: https://github.com/abeyfoundation/go-abey
+- Releases: https://github.com/abeyfoundation/go-abey/releases
 
 ---
 
@@ -35,7 +35,7 @@ You can build Abey from source or download a prebuilt release:
 Ensure a working Go environment is installed, then run:
 
 ```bash
-git clone https://github.com/AbeyFoundation/go-abey.git
+git clone https://github.com/abeyfoundation/go-abey.git
 cd go-abey
 git checkout release3.0
 make gabey
@@ -90,7 +90,7 @@ Abey works seamlessly with popular Ethereum SDKs and tools:
 
 For Go-based backends and indexers, Abey provides a dedicated client library:
 
-- https://github.com/AbeyFoundation/go-abey/tree/main/abeyclient
+- https://github.com/abeyfoundation/go-abey/tree/main/abeyclient
 
 ---
 
