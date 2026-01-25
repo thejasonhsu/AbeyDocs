@@ -10,7 +10,7 @@ This repository contains official documentation and network endpoints for **Abey
 
 - **RPC:** https://rpc.abeychain.com  
 - **Chain ID:** `179`  
-- **Explorer:** https://abeyscan.com
+- **Explorer:** [https://abeyscan.com](https://abeyscan.com)
 
 ---
 
@@ -18,5 +18,5 @@ This repository contains official documentation and network endpoints for **Abey
 
 - **RPC:** https://testrpc.abeychain.com  
 - **Chain ID:** `178`  
-- **Explorer:** https://testnet.abeyscan.com  
+- **Explorer:** [https://testnet.abeyscan.com](https://testnet.abeyscan.com)
 - **Faucet:** https://testnet-faucet.abeychain.com
