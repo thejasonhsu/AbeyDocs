@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Overview](README.md)
+* [Abey Documentation](README.md)
 
 ## Installation
 
