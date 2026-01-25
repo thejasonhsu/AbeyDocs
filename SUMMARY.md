@@ -31,7 +31,8 @@
 * [Staking ABI](DPOS/Staking-ABI.md)
 
 ## Scan API
-* [Scan API](API/api.md)
+* [Scan API](API/API.md)
 
 ## Whitepaper
 * [Whitepaper](Whitepaper/Abey-Whitepaper.md)
+* [Supply & Tokenomics](Whitepaper/Abey-Supply-&-Tokenomics.md)
