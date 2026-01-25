@@ -1,6 +1,6 @@
 _Last updated: January 2026_
 
-# JSON-RPC API Reference
+# Abey JSON-RPC API
 
 This document describes the **Abey JSON-RPC API** exposed by the `gabey` client.
 The API follows the **JSON-RPC 2.0** specification and is compatible with HTTP, IPC, WebSocket, and batch requests.
