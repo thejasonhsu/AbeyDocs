@@ -8,7 +8,7 @@
    * [macOS](Installation/instructions_macos.md)
    * [Windows](Installation/instructions_windows.md)
    * [Ubuntu](Installation/instructions_ubuntu.md)
-   * [Centos](Installation/instructions_cenos.md)
+   * [Centos](Installation/instructions_centos.md)
    * [Docker](Installation/running_docker.md)
 
 ## RPC
