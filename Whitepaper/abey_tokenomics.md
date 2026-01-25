@@ -8,23 +8,17 @@ This document describes the historical supply, issuance schedule, and token dist
 
 ### History
 
-Abey launched in 2018 with a hybrid **fPoW (fast Proof-of-Work)** and **DPoS (Delegated Proof-of-Stake)** consensus model.  
+Abey launched in 2018 with a hybrid **fPoW (fast Proof-of-Work)** and **DPoS (Delegated Proof-of-Stake)** consensus model. 
+
 The fPoW component was fully deprecated in 2021, leaving Proof-of-Stake as the sole consensus mechanism.
 
 ---
 
 ### Release Schedule
 
-Abey follows a **declining inflation model** with a **soft supply cap**.  
-Mining and staking rewards are halved every four years.
+Abey follows a **declining inflation model** with a **soft supply cap**. Mining and staking rewards are halved every four years.
 
 The table below illustrates annual issuance and cumulative supply growth until emissions fall below **1 ABEY per year**, reaching a soft cap of approximately **1.426 billion ABEY**.
-
-
-
-Abey follows a declining inflation model with a soft supply cap. Mining and staking rewards are halved every four years.
-
-The table below illustrates annual issuance and cumulative supply growth until emissions fall below 1 ABEY per year, reaching the soft cap of approximately 1.426 billion ABEY.
 
 | Year | PoS Issuance | PoW Issuance | Total Issued (Year) | Cumulative Supply |
 |------|--------------|--------------|---------------------|-------------------|
