@@ -1,133 +1,175 @@
+_Last updated: January 2026_
+
+# Staking Contract Reference
+
 ## Contract Address
 
-abeychain staking contract is deployed at address:
+The Abey staking contract is deployed at the following address:
 
 ```
 0x000000000000000000747275657374616b696E67
 ```
 
-## Contract json ABI
+---
 
-Refer to [Staking ABI](https://github.com/abeychain/go-abey/wiki/Staking-ABI)
+## Contract JSON ABI
 
-## Interact with contract interface
+Refer to the official documentation for the full ABI definition:
 
-### deposit
+- [Staking ABI](https://github.com/abeychain/go-abey/wiki/Staking-ABI)
 
-One node can participate as a validator to proposal new blocks with `deposit` function. To
-create your validator, you need to `deposit` some `abey` coin and register you validator 
-public key.  Delegators can bond their coin to the validator account and shares block reward
-by their portion. Validator can charge for additional `fee` rate from the delegators reward.
+---
 
-The feeRate calculation:
+## Contract Interface
+
+This section describes how validators and delegators interact with the staking contract.
+
+---
+
+## `deposit`
+
+A node can participate as a validator and propose new blocks by calling the `deposit` function.
+
+To create a validator, you must deposit a certain amount of `ABEY` and register your validator public key. Delegators may bond their tokens to a validator and share block rewards proportionally. Validators may charge an additional fee rate on delegator rewards.
+
+### Fee Rate Calculation
 
 ```
 feeRate = fee / 10000
 ```
 
-After deposit, the node becomes a validator candidate. Only if the deposit balance > 20000(abey),
-the validator can be selected as a candidate.
+After depositing, the node becomes a validator candidate. Only validators with a deposit balance greater than **20,000 ABAY** may be selected as active candidates.
 
-| parameter | type    | comment                                                      |
-| --------- | ------- | ------------------------------------------------------------ |
-| pubkey    | bytes   | BFT public key of 65 bytes                                   |
-| fee       | uint256 | percent of reward charged for delegate, the rate = fee / 10000 |
-| value     | wei     | `abey` token to deposit |
+### Parameters
 
+| Name   | Type    | Description                                                         |
+| ------ | ------- | ------------------------------------------------------------------- |
+| pubkey | bytes   | BFT public key (65 bytes)                                           |
+| fee    | uint256 | Percentage of reward charged to delegators (`fee / 10000`)          |
+| value  | wei     | Amount of `abey` to deposit                                         |
 
-### cancel
+---
 
-Validator can cancel a portion of the deposit from staking balance. With the `cancel` transaction executed, the cancelled portion is locked in the contract for about 2 weeks. 
-After the period, validator can withdraw the canceled coins.
+## `cancel`
 
-| parameter | type    | comment                                        |
-| :-------- | ------- | ---------------------------------------------- |
-| value     | uint256 | unlock a portion of deposit, the unit is `wei` |
+A validator may cancel (unstake) a portion of their deposited balance. Once canceled, the amount is locked in the contract for approximately **2 weeks** before it can be withdrawn.
 
-### append
+### Parameters
 
-Validator can deposit extra `abey` token to the deposit contract by `append` function.
+| Name  | Type    | Description                                      |
+| ----- | ------- | ------------------------------------------------ |
+| value | uint256 | Amount to unlock from the staking balance (wei) |
 
-| parameter | type | comment                                         |
-| --------- | ---- | ----------------------------------------------- |
-| value     | wei  | amout of coin staked by the deposit account |
+---
 
-### withdraw
+## `append`
 
-Validator can withdraw the unlocked token after a locking period of 2 weeks. All the deposit balance can be retrived by `getDeposit` function.
+A validator may increase their staking balance by depositing additional `abey` using the `append` function.
 
-| parameter | type         | comment                                 |
-| --------- | ------------ | --------------------------------------- |
-| value     | uint256(wei) | amount of value withdrawed to the owner |
+### Parameters
 
-### getDeposit
+| Name  | Type | Description                                   |
+| ----- | ---- | --------------------------------------------- |
+| value | wei  | Amount of additional `abey` to stake          |
 
-Validator can query deposit balance by `getDeposit` function. there are 3 states for the
-deposit: `staked`, `locked`, `unlocked`
+---
 
-* staked: token which validator bond to stake contract and may receive block reward
-* locked: token which were canceld but are still locked in the deposit util 2 weeks.
-* unlocked: valdator use withdraw token of unlocked state
+## `withdraw`
 
-| parameter | type    | comment                      |
-| --------- | ------- | ---------------------------- |
-| owner     | address | address of deposit validator |
+A validator may withdraw unlocked tokens after the 2-week locking period. The full deposit state can be queried using the `getDeposit` function.
 
-`getDeposit` function outputs  `uint256` tuple of 3 items:(staked, locked, unlocked)
+### Parameters
 
-| parameter | type    | comment                                               |
-| --------- | ------- | ----------------------------------------------------- |
-| staked    | uint256 | amount which is staked in deposit                     |
-| locked    | uint256 | amount which is cancelled but still is in lock period |
-| unlocked  | uint256 | amount which validator can withdraw                   |
+| Name  | Type         | Description                                   |
+| ----- | ------------ | --------------------------------------------- |
+| value | uint256 (wei) | Amount of unlocked tokens to withdraw        |
 
-### delegate
+---
 
-People who do not want to run a validator full node can deposit their token to a certern
-validator to gain staking reward.
+## `getDeposit`
 
-If the holder's own deposit is less than 20000 abey, delegtor can not receive any reward as the
-validator would't be elected as a candidate.
+Retrieves the deposit balance of a validator. Deposits exist in three states:
 
-| parameter | type    | comment                                           |
-| --------- | ------- | ------------------------------------------------- |
-| holder    | address | address of a particular validator account                         |
-| value     | wei     | amout of coin deposit to the delegator account |
+- **staked**: Tokens actively staked and eligible for rewards  
+- **locked**: Tokens canceled but still in the lock period  
+- **unlocked**: Tokens available for withdrawal  
 
+### Parameters
 
-### undelegate
+| Name  | Type    | Description                         |
+| ----- | ------- | ----------------------------------- |
+| owner | address | Validator deposit owner address     |
 
-Delegator can cancel a portion of the deposit from a certern validator holder.
-With the `undelegate` transaction, the cancelled portion is locked in the contract for
-about 2 weeks. After the period, delegator can withdraw the canceled token.
+### Return Values
 
-| parameter | type    | comment                            |
-| --------- | ------- | ---------------------------------- |
-| holder    | address | address of the delegator           |
-| value     | uint256 | unlock a portion of delegated coin |
+Returns a tuple of three `uint256` values: `(staked, locked, unlocked)`
 
-### withdrawDelegate
+| Name     | Type    | Description                                      |
+| -------- | ------- | ------------------------------------------------ |
+| staked   | uint256 | Amount currently staked                          |
+| locked   | uint256 | Amount canceled but still locked                 |
+| unlocked | uint256 | Amount available for withdrawal                  |
 
-Delegator can withdraw the unlocked token from a validtor. All the delegation balance can be retrived by `getDelegate` function.
+---
 
-| parameter | type    | comment                                |
-| --------- | ------- | -------------------------------------- |
-| holder    | address | address of the delegator               |
-| value     | uint256 | amount of coin withdrawed to the owner |
+## `delegate`
 
-### getDelegate
+Users who do not operate a validator node may delegate their tokens to an existing validator to earn staking rewards.
 
-`getDelegate` return the balance state of a delegator. The state of token balance is similar to `getDeposit`
+If a validator’s own deposit is less than **20,000 ABAY**, delegators will not receive rewards because the validator will not be elected.
 
-| parameter | type    | comment                             |
-| --------- | ------- | ----------------------------------- |
-| owner     | address | owner address of the delegated coin |
-| holder    | address | address of the delegator            |
+### Parameters
 
-`getDelegate` function outputs  `uint256` tuple of 3 items: (staked, locked, unlocked)
+| Name   | Type    | Description                                           |
+| ------ | ------- | ----------------------------------------------------- |
+| holder | address | Address of the validator being delegated to           |
+| value  | wei     | Amount of `abey` delegated                            |
 
-| parameter | type    | comment                                               |
-| --------- | ------- | ----------------------------------------------------- |
-| staked    | uint256 | amount which is staked in deposit                     |
-| locked    | uint256 | amount which is cancelled but still is in lock period |
-| unlocked  | uint256 | amount which coin owner can withdraw                  |
+---
+
+## `undelegate`
+
+A delegator may cancel a portion of their delegated stake. The canceled amount is locked for approximately **2 weeks** before it becomes withdrawable.
+
+### Parameters
+
+| Name   | Type    | Description                                  |
+| ------ | ------- | -------------------------------------------- |
+| holder | address | Validator address                             |
+| value  | uint256 | Amount of delegated stake to unlock (wei)   |
+
+---
+
+## `withdrawDelegate`
+
+Delegators may withdraw unlocked tokens after the lock period. The delegation balance can be queried using the `getDelegate` function.
+
+### Parameters
+
+| Name   | Type    | Description                                   |
+| ------ | ------- | --------------------------------------------- |
+| holder | address | Validator address                             |
+| value  | uint256 | Amount of unlocked tokens to withdraw         |
+
+---
+
+## `getDelegate`
+
+Returns the delegation balance of a delegator. The balance states are identical to `getDeposit`.
+
+### Parameters
+
+| Name   | Type    | Description                                   |
+| ------ | ------- | --------------------------------------------- |
+| owner  | address | Owner of the delegated tokens                 |
+| holder | address | Validator address                             |
+
+### Return Values
+
+Returns a tuple of three `uint256` values: `(staked, locked, unlocked)`
+
+| Name     | Type    | Description                                      |
+| -------- | ------- | ------------------------------------------------ |
+| staked   | uint256 | Amount currently delegated and earning rewards   |
+| locked   | uint256 | Amount canceled but still locked                 |
+| unlocked | uint256 | Amount available for withdrawal                  |
