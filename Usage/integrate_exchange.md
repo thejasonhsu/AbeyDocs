@@ -1,7 +1,5 @@
 _Last updated: January 2026_
 
-# Integrating an Exchange with Abey
-
 This guide provides an overview for **exchanges and custodial platforms** integrating with the **Abey** blockchain.
 Abey is **EVM-compatible**, making integration straightforward for teams already supporting Ethereum.
 
