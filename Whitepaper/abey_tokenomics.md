@@ -1,7 +1,5 @@
 _Last updated: January 2026_
 
-# ABEY Supply and Tokenomics
-
 This document describes the historical supply, issuance schedule, and token distribution model of **ABEY**.
 
 ---
