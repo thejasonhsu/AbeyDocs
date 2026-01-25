@@ -34,5 +34,5 @@
 * [Scan API](API/api.md)
 
 ## Whitepaper
-* [Whitepaper](Whitepaper/abey_whitepaper.md)
-* [Tokenomics](Whitepaper/abey_tokenomics.md)
+* [Abey Whitepaper](Whitepaper/abey_whitepaper.md)
+* [$ABEY Tokenomics](Whitepaper/abey_tokenomics.md)
