@@ -7,7 +7,7 @@
 * [Installation](Installation/building_abey.md)
    * [macOS](Installation/instructions_macos.md)
    * [Windows](Installation/instructions_windows.md)
-   * [Ubuntu](IInstallation/instructions_ubuntu.md)
+   * [Ubuntu](Installation/instructions_ubuntu.md)
    * [Centos](Installation/instructions_cenos.md)
    * [Docker](Installation/running_docker.md)
 
