@@ -1,13 +1,28 @@
-Updated as of January 2026
+_Last updated: January 2026_
 
-## $ABEY Supply
+# ABEY Supply and Tokenomics
+
+This document describes the historical supply, issuance schedule, and token distribution model of **ABEY**.
+
+---
+
+## ABEY Supply
 
 ### History
 
-Abey launched in 2018 with a hybrid fPoW (fast Proof-of-Work) and DPoS (Delegated Proof-of-Stake) consensus model.  
-The fPoW component was fully deprecated in 2021, leaving PoS as the sole consensus mechanism.
+Abey launched in 2018 with a hybrid **fPoW (fast Proof-of-Work)** and **DPoS (Delegated Proof-of-Stake)** consensus model.  
+The fPoW component was fully deprecated in 2021, leaving Proof-of-Stake as the sole consensus mechanism.
+
+---
 
 ### Release Schedule
+
+Abey follows a **declining inflation model** with a **soft supply cap**.  
+Mining and staking rewards are halved every four years.
+
+The table below illustrates annual issuance and cumulative supply growth until emissions fall below **1 ABEY per year**, reaching a soft cap of approximately **1.426 billion ABEY**.
+
+
 
 Abey follows a declining inflation model with a soft supply cap. Mining and staking rewards are halved every four years.
 
@@ -46,7 +61,7 @@ The table below illustrates annual issuance and cumulative supply growth until e
 
 Real-time supply data can be accessed via the AbeyScan API.
 
-API endpoint: https://api.abeyscan.com/api/status/supply  
+API endpoint: https://api.abeyscan.com/api/stats/supply  
 Documentation: https://docs.abey.com/scan-api/api
 
 #### Current Supply Metrics

@@ -1,3 +1,20 @@
+_Last updated: January 2026_
+
+# Abey JSON-RPC API
+
+This document includes complete, per-method JSON-RPC references for the Abey client **`gabey`**.
+It includes supported transports, usage notes, and detailed documentation for every method listed in this file (parameters, returns, and examples).
+
+## Quick Notes
+
+- Default endpoint: `http://localhost:8545`
+- Protocol: JSON-RPC 2.0
+- Transports: HTTP / IPC / WebSocket
+- Batch requests: Supported
+- Pub/Sub: Experimental (see RPC-PUB-SUB link in this doc)
+
+---
+
 **Contents**
 - [JSON RPC API](#json-rpc-api)
   - [JSON-RPC Endpoint](#json-rpc-endpoint)
@@ -309,13 +326,11 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# JSON RPC API  
-
-[JSON](http://json.org/) is a lightweight data-interchange format. It can represent numbers, strings, ordered sequences of values, and collections of name/value pairs.
+# JSON-RPC API [JSON](http://json.org/) is a lightweight data-interchange format. It can represent numbers, strings, ordered sequences of values, and collections of name/value pairs.
 
 [JSON-RPC](http://www.jsonrpc.org/specification) is a stateless, light-weight remote procedure call (RPC) protocol. Primarily this specification defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in many various message passing environments. It uses JSON ([RFC 4627](http://www.ietf.org/rfc/rfc4627.txt)) as data format.
 
-gabey  has experimental pub/sub support. See [this](https://github.com/abeychain/go-abey/wiki/RPC-PUB-SUB) page for more information.
+gabey has experimental pub/sub support. See [this](https://github.com/AbeyFoundation/go-abey/wiki/RPC-PUB-SUB) page for more information.
 
 
 ## JSON-RPC Endpoint
@@ -328,19 +343,19 @@ http://localhost:8545
 
 You can start the HTTP JSON-RPC with the `--rpc` flag
 ```bash
-gabey  --rpc
+gabey --rpc
 ```
 
-change the default port (8545) and listing address (localhost) with:
+change the default port (8545) and listening address (localhost) with:
 
 ```bash
-gabey  --rpc --rpcaddr <ip> --rpcport <portnumber>
+gabey --rpc --rpcaddr <ip> --rpcport <portnumber>
 ```
 
-If accessing the RPC from a browser, CORS will need to be enabled with the appropriate domain set. Otherwise, JavaScript calls are limit by the same-origin policy and requests will fail:
+If accessing the RPC from a browser, CORS will need to be enabled with the appropriate domain set. Otherwise, JavaScript calls are limited by the same-origin policy and requests will fail:
 
 ```bash
-gabey  --rpc --rpccorsdomain "http://localhost:3000"
+gabey --rpc --rpccorsdomain "http://localhost:3000"
 ```
 
 ## JSON-RPC support
@@ -362,7 +377,7 @@ The following methods have an extra default block parameter:
 - [impawn_getAllCancelableAsset](#impawn_getAllCancelableAsset)
 - [impawn_getStakingAccount](#impawn_getStakingAccount)
 
-When requests are made that act on the state of abeychain, the last default block parameter determines the height of the block.
+When requests are made that act on the state of Abey, the last default block parameter determines the block height.
 
 The following options are possible for the defaultBlock parameter:
 
@@ -382,7 +397,7 @@ The examples also do not include the URL/IP & port combination which must be the
 |   [abey](#abey)   |  [impawn](#impawn) |[web3](#web3) |[net](#net) |
 | :------------------: | :-----------------:|:-----------------: |:-----------------: |
 | [protocolVersion](#abey_protocolVersion)|[getAllStakingAccount](#impawn_getAllStakingAccount)|[clientVersion](#web3_clientVersion)|[version](#net_version)|
-|[syncing](#abey_sycning)|[getStakingAsset](#impawn_getStakingAsset)|[sha3](#web3_sha3)| [peerCount](#net_peercount)|
+|[syncing](#abey_syncing)|[getStakingAsset](#impawn_getStakingAsset)|[sha3](#web3_sha3)| [peerCount](#net_peercount)|
 |[coinbase](#abey_coinbase)|[getLockedAsset](#impawn_getLockedAsset)||[listening](#net_listening)|
 |[mining](#abey_mining)|[getAllCancelableAsset](#impawn_getAllCancelableAsset)|
 |[hashrate](#abey_hashrate)|[getStakingAccount](#impawn_getStakingAccount)|
@@ -516,7 +531,7 @@ none
 ##### Returns
 
 `String` - The current network id.
-- `"19330"`: abeychain Mainnet
+- `"19330"`: Abey Mainnet
 - `"18928"`: Testnet
 - `"100"`:   Devnet
 
@@ -590,14 +605,14 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 
 #### abey_protocolVersion
 
-Returns the current abeychain protocol version.
+Returns the current Abey protocol version.
 
 ##### Parameters
 none
 
 ##### Returns
 
-`String` - The current abeychain protocol version.
+`String` - The current Abey protocol version.
 
 ##### Example
 ```js
@@ -974,14 +989,14 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "abey_getStorageAt", "params": 
 
 Retrieving an element of the map is harder. The position of an element in the map is calculated with:
 ```js
-keccack(LeftPad32(key, 0), LeftPad32(map position, 0))
+keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
 ```
 
 This means to retrieve the storage on pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] we need to calculate the position with:
 ```js
 keccak(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
-The gabey  console which comes with the web3 library can be used to make the calculation:
+The gabey console which comes with the web3 library can be used to make the calculation:
 ```js
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
 undefined
@@ -1147,9 +1162,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"abey_getCode","params":["0xa94f5
 
 #### abey_sign
 
-The sign method calculates an abeychain specific signature with: `sign(keccak256("\x19abeychain Signed Message:\n" + len(message) + message)))`.
+The sign method calculates an Abey specific signature with: `sign(keccak256("\x19abey Signed Message:\n" + len(message) + message)))`.
 
-By adding a prefix to the message makes the calculated signature recognisable as an abeychain specific signature. This prevents misuse where a malicious DApp can sign arbitrary data (e.g. transaction) and use the signature to impersonate the victim.
+Adding a prefix to the message makes the calculated signature recognisable as an Abey-specific signature. This prevents misuse where a malicious dApp can sign arbitrary data and use the signature to impersonate the victim.
 
 **Note** the address to sign with must be unlocked. 
 
@@ -1338,7 +1353,7 @@ Generates and returns an estimate of how much gas is necessary to allow the tran
 
 ##### Parameters
 
-See [abey_call](#abey_call) parameters, expect that all properties are optional. If no gas limit is specified gabey  uses the block gas limit from the pending block as an upper bound. As a result the returned estimate might not be enough to executed the call/transaction when the amount of gas is higher than the pending block gas limit.
+See [abey_call](#abey_call) parameters, expect that all properties are optional. If no gas limit is specified gabey uses the block gas limit from the pending block as an upper bound. As a result the returned estimate might not be enough to executed the call/transaction when the amount of gas is higher than the pending block gas limit.
 
 ##### Returns
 
@@ -2065,7 +2080,7 @@ none
 
 ##### Returns
 
-QUANTITY - integer of the current committee number.
+`QUANTITY` - integer of the current committee number.
 
 ##### Example
 ```js
@@ -2093,7 +2108,7 @@ none
 
 ##### Returns
 
-QUANTITY - integer of the current fruit number.
+`QUANTITY` - integer of the current fruit number.
 
 ##### Example
 ```js
@@ -2185,7 +2200,7 @@ none
 
 ##### Returns
 
-QUANTITY - integer of the current snail block number.
+`QUANTITY` - integer of the current snail block number.
 
 ##### Example
 ```js

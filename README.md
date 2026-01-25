@@ -1,12 +1,22 @@
-# Abey Docs
+_Last updated: January 2026_
 
-Mainnet 
-* RPC: [https://rpc.abeychain.com](https://rpc.abeychain.com)
-* Chain ID: 179
-* Explorer: [https://abeyscan.com](https://abeyscan.com)
+# Abey Documentation
 
-Testnet 
-* RPC: [https://testrpc.abeychain.com](https://testrpc.abeychain.com)
-* Chain ID: 178
-* Explorer: [https://testnet.abeyscan.com](https://testnet.abeyscan.com)
-* Faucet: [https://testnet-faucet.abeychain.com](https://testnet-faucet.abeychain.com)
+This repository contains official documentation and network endpoints for **Abey**.
+
+---
+
+## Mainnet
+
+- **RPC:** https://rpc.abeychain.com  
+- **Chain ID:** `179`  
+- **Explorer:** https://abeyscan.com
+
+---
+
+## Testnet
+
+- **RPC:** https://testrpc.abeychain.com  
+- **Chain ID:** `178`  
+- **Explorer:** https://testnet.abeyscan.com  
+- **Faucet:** https://testnet-faucet.abeychain.com

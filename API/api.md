@@ -1,97 +1,101 @@
-## Scan API Reference
+_Last updated: January 2026_
 
-List of APIs:
+# Scan API Reference
 
-- [statusDatabase](#statusDatabase)
-- [statusSupply](#statusSupply)
+## Available Endpoints
 
-#### statusDatabase
+- [`GET /v2/stats`](#get-v2stats)
+- [`GET /stats/supply`](#get-statssupply)
 
-Uri: /status/database
+---
 
-Request method: GET
+## `GET /v2/stats`
 
-Returns Abey's real-time data, including lightning blocks, block times, transaction Counts, address counts, and committee.
-
-##### Parameters
-
-Parameters: None
-
-##### Returns
-
-`lightningBlocks` - Lightning Block.
-
-`snailBlocks` - Snail Block.
-
-`totalTxs` - Transaction Count.
-
-`totalAddress` - Address Count.
-
-`committee` - Committee.
-
-`blockTime` - Block Time.
-
-##### Example
-```js
-// Request
-curl --location --request GET 'https://api.abeyscan.com/api/status/database'
-
-// Result
-{
-    "code": 200,
-    "message": "success",
-    "data": {
-        "lightningBlocks": 8027675,
-        "totalTxs": 33230820,
-        "totalAddress": 163163,
-        "snailBlocks": 67272,
-        "committee": 322,
-        "blockTime": "5.1"
-    }
-}
+### URI
 ```
-#### statusSupply
+/v2/stats
+```
 
-Uri: /status/supply
+### Method
+```
+GET
+```
 
-Request method: GET
+### Description
 
-Returns Abey's supply information, including market cap, price, max supply, total supply, and remaining supply. 
+Returns Abey's real-time network data, including block, gas, and transaction data.
 
-##### Parameters
+### Parameters
 
-Parameters: None
+None.
 
-##### Returns
+### Example Request
 
-`marketCap` - Market Cap.
+```bash
+curl --request GET \
+  --url https://api.abeyscan.com/api/v2/stats
+```
 
-`remainingSupply` - Remaining Supply.
+### Example Response
 
-`totalSupply` - Total Supply.
-
-`price` - Price.
-
-`maxSupply` - Max Supply.
-
-##### Example
-```js
-// Request
-curl --location --request GET 'https://api.abeyscan.com/api/status/supply'
-
-// Result
+```json
 {
-    "code": 200,
-    "message": "success",
-    "data": {
-    "data": {
-        "marketCap": 777774531.28204, 
-        "remainingSupply": 234273111,
-        "totalSupply": 1306832669,
-        "price": 0.59516,
-        "maxSupply": 1541105780
-    }
-}
+  "average_block_time": 5111.0,
+  "coin_image": null,
+  "coin_price": "0.03221",
+  "coin_price_change_percentage": -2.24,
+  "gas_price_updated_at": "2026-01-25T01:45:48.457777Z",
+  "gas_prices": {
+    "slow": 13.0,
+    "average": 13.0,
+    "fast": 13.0
+  },
+  "gas_prices_update_in": 5961,
+  "gas_used_today": "137710194",
+  "network_utilization_percentage": 0.017934125,
+  "total_addresses": "357207",
+  "total_blocks": "29947767",
+  "total_gas_used": "0",
+  "total_transactions": "74812188",
+  "transactions_today": "6200"
 }
 ```
 
+---
+
+## `GET /stats/supply`
+
+### URI
+```
+/stats/supply
+```
+
+### Method
+```
+GET
+```
+
+### Description
+
+Returns Abey's current total supply.
+
+### Parameters
+
+None.
+
+### Example Request
+
+```bash
+curl --request GET \
+  --url https://api.abeyscan.com/api/stats/supply
+```
+
+### Example Response
+
+```json
+{
+  "message": "OK",
+  "result": "1392562419278214324414305317",
+  "status": "1"
+}
+```
