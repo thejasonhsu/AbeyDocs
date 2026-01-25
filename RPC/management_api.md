@@ -1,7 +1,5 @@
 _Last updated: January 2026_
 
-# Abey Management API
-
 Abey Management APIs provide administrative and operational control over a running **gabey** node.  
 These APIs are exposed via **JSON-RPC** and organized by functional modules such as `admin`, `debug`, `miner`, `personal`, and others.
 
@@ -22,7 +20,7 @@ This configuration:
 1. Enables **admin**, **abey**, and **miner** APIs over IPC
 2. Enables **abey** and **web3** APIs over HTTP RPC
 
-⚠️ **Security Warning**
+**Security Warning**
 
 Exposing APIs over HTTP (`--rpc`) or WebSocket (`--ws`) allows any client with network access to call them.  
 Enable only the APIs you need, especially on public or production systems.

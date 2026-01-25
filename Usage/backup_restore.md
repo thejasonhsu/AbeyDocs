@@ -1,7 +1,5 @@
 _Last updated: January 2026_
 
-# Backup and Restore Guide
-
 This document explains how to safely back up, restore, and maintain data for the **Abey (`gabey`)** node, including accounts, blockchain data, and database maintenance.
 
 ---

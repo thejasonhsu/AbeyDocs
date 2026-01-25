@@ -1,7 +1,5 @@
 _Last updated: January 2026_
 
-# Managing Your Accounts
-
 If you lose the password used to encrypt an account, **you permanently lose access to that account**.  
 There is **no password recovery mechanism**.  
 

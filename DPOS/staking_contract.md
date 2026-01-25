@@ -1,7 +1,5 @@
 _Last updated: January 2026_
 
-# Abey Staking Contract
-
 ## Contract Address
 
 The Abey staking contract is deployed at the following address:

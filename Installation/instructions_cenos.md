@@ -1,7 +1,5 @@
 _Last updated: January 2026_
 
-# Installation Instructions for CentOS
-
 This guide explains how to build and run **Abey (`gabey`)** from source on CentOS-based systems.
 
 ---
