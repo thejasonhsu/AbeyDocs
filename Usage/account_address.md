@@ -1,7 +1,5 @@
 _Last updated: January 2026_
 
-# Account and Address Format
-
 This document describes how **Abey account addresses** are derived from public keys, including hashing, prefixing, checksumming, and Base58 encoding.
 
 ---
