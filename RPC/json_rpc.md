@@ -1,7 +1,5 @@
 _Last updated: January 2026_
 
-# Abey JSON-RPC API
-
 This document includes complete, per-method JSON-RPC references for the Abey client **`gabey`**.
 It includes supported transports, usage notes, and detailed documentation for every method listed in this file (parameters, returns, and examples).
 
