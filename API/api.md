@@ -1,73 +1,101 @@
-Updated as of January 2026
+_Last updated: January 2026_
 
-## Scan API Reference
+# Scan API Reference
 
-List of APIs:
+## Available Endpoints
 
-- [stats](#stats)
-- [statsSupply](#statsSupply)
+- [`GET /v2/stats`](#get-v2stats)
+- [`GET /stats/supply`](#get-statssupply)
 
-#### stats
+---
 
-Uri: /v2/stats
+## `GET /v2/stats`
 
-Request method: GET
-
-Returns Abey's real-time data, including lightning blocks, block times, transaction Counts, address counts, and committee.
-
-##### Parameters
-
-Parameters: None
-
-##### Example
-```js
-// Request
-curl --location --request GET 'https://api.abeyscan.com/api/v2/stats'
-
-// Result
-{
-    "average_block_time": 5111.0,
-    "coin_image": null,
-    "coin_price": "0.03221",
-    "coin_price_change_percentage": -2.24,
-    "gas_price_updated_at": "2026-01-25T01:45:48.457777Z",
-    "gas_prices": {
-        "slow": 13.0,
-        "average": 13.0,
-        "fast": 13.0
-    },
-    "gas_prices_update_in": 5961,
-    "gas_used_today": "137710194",
-    "network_utilization_percentage": 0.017934125,
-    "total_addresses": "357207",
-    "total_blocks": "29947767",
-    "total_gas_used": "0",
-    "total_transactions": "74812188",
-    "transactions_today": "6200",
-}
+### URI
 ```
-#### statsSupply
+/v2/stats
+```
 
-Uri: /stats/supply
+### Method
+```
+GET
+```
 
-Request method: GET
+### Description
 
-Returns Abey's current total supply. 
+Returns Abey's real-time network data, including block, gas, and transaction data.
 
-##### Parameters
+### Parameters
 
-Parameters: None
+None.
 
-##### Example
-```js
-// Request
-curl --location --request GET 'https://api.abeyscan.com/api/stats/supply'
+### Example Request
 
-// Result
+```bash
+curl --request GET \
+  --url https://api.abeyscan.com/api/v2/stats
+```
+
+### Example Response
+
+```json
 {
-    "message": "OK",
-    "result": "1392562419278214324414305317",
-    "status": "1"
+  "average_block_time": 5111.0,
+  "coin_image": null,
+  "coin_price": "0.03221",
+  "coin_price_change_percentage": -2.24,
+  "gas_price_updated_at": "2026-01-25T01:45:48.457777Z",
+  "gas_prices": {
+    "slow": 13.0,
+    "average": 13.0,
+    "fast": 13.0
+  },
+  "gas_prices_update_in": 5961,
+  "gas_used_today": "137710194",
+  "network_utilization_percentage": 0.017934125,
+  "total_addresses": "357207",
+  "total_blocks": "29947767",
+  "total_gas_used": "0",
+  "total_transactions": "74812188",
+  "transactions_today": "6200"
 }
 ```
 
+---
+
+## `GET /stats/supply`
+
+### URI
+```
+/stats/supply
+```
+
+### Method
+```
+GET
+```
+
+### Description
+
+Returns Abey's current total supply.
+
+### Parameters
+
+None.
+
+### Example Request
+
+```bash
+curl --request GET \
+  --url https://api.abeyscan.com/api/stats/supply
+```
+
+### Example Response
+
+```json
+{
+  "message": "OK",
+  "result": "1392562419278214324414305317",
+  "status": "1"
+}
+```
