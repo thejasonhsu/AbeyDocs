@@ -1,6 +1,6 @@
 _Last updated: January 2026_
 
-# Staking ABI
+# Abey Staking ABI
 
 This document describes the **events** and **functions** exposed by the Abey staking contract ABI.
 
