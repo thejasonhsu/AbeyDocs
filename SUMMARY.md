@@ -13,8 +13,8 @@
 
 ## RPC
 
-* [Management API](RPC/management_api.md)
-* [JSON RPC API](RPC/json_rpc.md)
+* [Abey Management API](RPC/management_api.md)
+* [Abey JSON RPC API](RPC/json_rpc.md)
 
 ## Usage
 
