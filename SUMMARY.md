@@ -26,9 +26,9 @@
 
 ## DPOS
 
-* [Staking guide](DPOS/staking_guide.md)
-* [Staking contract](DPOS/staking_contract.md)
-* [Staking ABI](DPOS/staking_abi.md)
+* [Abey staking guide](DPOS/staking_guide.md)
+* [Abey staking contract](DPOS/staking_contract.md)
+* [Abey staking ABI](DPOS/staking_abi.md)
 
 ## Scan API
 * [Scan API](API/api.md)
