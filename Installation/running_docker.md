@@ -1,7 +1,5 @@
 _Last updated: January 2026_
 
-# Running Abey in Docker
-
 This guide explains how to run an **Abey (`gabey`) node** using Docker.
 
 Abey provides an official Docker image containing recent snapshot builds from the `develop` branch, available on Docker Hub.
