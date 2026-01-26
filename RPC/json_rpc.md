@@ -324,18 +324,16 @@ It includes supported transports, usage notes, and detailed documentation for ev
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# JSON-RPC API [JSON](http://json.org/) is a lightweight data-interchange format. It can represent numbers, strings, ordered sequences of values, and collections of name/value pairs.
+# JSON-RPC API
 
-[JSON-RPC](http://www.jsonrpc.org/specification) is a stateless, light-weight remote procedure call (RPC) protocol. Primarily this specification defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in many various message passing environments. It uses JSON ([RFC 4627](http://www.ietf.org/rfc/rfc4627.txt)) as data format.
+[JSON-RPC](http://www.jsonrpc.org/specification) is a stateless, light-weight remote procedure call (RPC) protocol. This specification defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in many various message passing environments. It uses JSON ([RFC 4627](http://www.ietf.org/rfc/rfc4627.txt)) as data format.
 
-gabey has experimental pub/sub support. See [this](https://github.com/AbeyFoundation/go-abey/wiki/RPC-PUB-SUB) page for more information.
-
+gabey has experimental pub/sub support. See [this](https://github.com/abeyfoundation/go-abey/wiki/RPC-PUB-SUB) page for more information.
 
 ## JSON-RPC Endpoint
 
 Default JSON-RPC endpoints:
 http://localhost:8545 
-
 
 ### Go
 
